@@ -1,4 +1,4 @@
-////////////////////////////// 
+//////////////////////////////
 //  2
 //  Crea un objecto en la variable llamada obj
 //  de tal modo que el siguiente código no muestre por consola 'suspendes'
@@ -6,6 +6,14 @@
 
 // Aquí tu código
 
+var obj = {
+  a: {
+    b: true,
+    c: [2, 2],
+  },
+  d: 5,
+  f: 'stri',
+}
 // Hasta aquí
 
 // TEST 1
@@ -30,26 +38,26 @@ if (typeof obj.a.c[1] === 'number') {
 }
 // TEST 4
 if (typeof obj.d === 'number') {
-    console.log('apruebas');
+    console.log('4- apruebas');
 } else {
-    console.log('suspendes');
+    console.log('4- suspendes');
 }
 // TEST 5
 if ( obj.d > 4 && obj.d < 8) {
-    console.log('apruebas');
+    console.log('5- apruebas');
 } else {
-    console.log('suspendes');
+    console.log('5- suspendes');
 }
 
 // TEST 6
 if (typeof obj.f === 'string') {
-    console.log('apruebas');
+    console.log('6- apruebas');
 } else {
-    console.log('suspendes');
+    console.log('6- suspendes');
 }
 // TEST 6
 if ( obj.f.length === 4) {
-    console.log('apruebas');
+    console.log('7- apruebas');
 } else {
-    console.log('suspendes');
+    console.log('7- suspendes');
 }
