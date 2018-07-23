@@ -1,4 +1,4 @@
-////////////////////////////// 
+//////////////////////////////
 //  5
 //  Queremos saber cuanto suman todos los items del array arr
 //  Crea un variable llamada total que sea de tipo number,
@@ -17,6 +17,11 @@ for (let i = 0; i < giveMeIntegerRandom(10); i++) {
 console.log('El array original es:  arr =', arr);
 
 // Aquí tu código
+var total = 0;
+
+for (let i of arr){
+  total += i;
+}
 
 
 // Hasta aquí

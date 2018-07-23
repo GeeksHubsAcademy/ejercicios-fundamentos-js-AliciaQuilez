@@ -1,7 +1,7 @@
-////////////////////////////// 
+//////////////////////////////
 //  4
-//  Crea una variable llamada acronimo 
-//  que sea tipo string 
+//  Crea una variable llamada acronimo
+//  que sea tipo string
 //  y tenga la primera letra de cada item del array llamado frase
 //  de tal modo que el siguiente código no muestre por consola 'suspendes'
 
@@ -10,7 +10,13 @@ let frase = Math.random() > 0.5 ? ['unite', 'states', 'america'] : ['aeropuertos
 console.log('El array frase es: ', frase);
 // Aquí tu código
 
+var acronimo ='' ;
 
+for(let i of frase){
+  acronimo += i.substr(0, 1);
+}
+
+acronimo = acronimo.toUpperCase();
 
 // Hasta aquí
 console.log('El string acronimo es: ', acronimo);
