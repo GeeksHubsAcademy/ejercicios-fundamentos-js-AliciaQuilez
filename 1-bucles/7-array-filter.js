@@ -35,3 +35,10 @@ let gente = [{
     },
 ]
 
+// var genteFiltro = gente.filter( function (i){
+//     return (i.nombre.substr(0, 1) == 'J' && i.edad < 40);
+//   })
+
+var genteFiltro = gente.filter( i => i.nombre.substr(0, 1) == 'J' && i.edad < 40)
+
+console.log(genteFiltro);
