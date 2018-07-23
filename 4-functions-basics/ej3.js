@@ -10,13 +10,19 @@
 
 let caracterInicial = (texto) => {
     // Aquí tu código.  Desde aquí:
-    
+    if(typeof texto !== 'string'){
+      return 'Debo ser ejecutada con un string';
+    }else if(texto.length == 0){
+      return 'Debo ser ejecutada con un string no vacío';
+    }else{
+      return texto.substr(0,1);
+    }
     // Hasta aquí.
 }
 
 
 let test = require('../test.js');
-//  test(functionTotest, [argumento1,argumento2, etc..],  expectedOutput) 
+//  test(functionTotest, [argumento1,argumento2, etc..],  expectedOutput)
 // comprueba si: caracterInicial('juan') === 'j'
 test(caracterInicial, ['juan'], 'j');
 test(caracterInicial, ['Hola'], 'H');

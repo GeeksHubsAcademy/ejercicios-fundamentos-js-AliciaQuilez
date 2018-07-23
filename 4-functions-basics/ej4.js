@@ -10,7 +10,13 @@
 
 let ultimoCaracter = (texto) => {
     // Aquí tu código.  Desde aquí:
-  
+    if(typeof texto !== 'string'){
+      return 'Debo ser ejecutada con un string';
+    }else if(texto.length == 0){
+      return 'Debo ser ejecutada con un string no vacío';
+    }else{
+      return texto.substr(texto.length-1,1);
+    }
 
 
     // Hasta aquí.
@@ -18,7 +24,7 @@ let ultimoCaracter = (texto) => {
 
 
 let test = require('../test.js');
-//  test(functionTotest, [argumento1,argumento2, etc..],  expectedOutput) 
+//  test(functionTotest, [argumento1,argumento2, etc..],  expectedOutput)
 // comprueba si: ultimoCaracter('juan') === 'n'
 test(ultimoCaracter, ['juan'], 'n');
 test(ultimoCaracter, ['Hola'], 'a');
