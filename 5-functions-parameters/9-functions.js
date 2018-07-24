@@ -1,4 +1,4 @@
-////////////////////////////// 
+//////////////////////////////
 //  9
 //  Crear una función llamada muestraPorConsolaEurosEnPesetas
 //  que NO de DEVOLVER nada (devolver undefined)
@@ -9,34 +9,40 @@
 //  throw new Error('muestraPorConsolaEurosEnPesetas debe recibir un number');
 
 // Aquí tu código
-
+let muestraPorConsolaEurosEnPesetas = (euros) => {
+  if (typeof euros == 'number') {
+    console.log(euros * 168);
+  } else {
+    throw new Error('convierteEurosEnPesetas debe recibir un number');
+  }
+}
 
 // Hasta aquí
 
 
 // TEST 1
-if (typeof muestraPorConsolaEurosEnPesetas === 'function' ) {
-    console.log('apruebas:  muestraPorConsolaEurosEnPesetas es una función');
+if (typeof muestraPorConsolaEurosEnPesetas === 'function') {
+  console.log('apruebas:  muestraPorConsolaEurosEnPesetas es una función');
 } else {
-    console.log('suspendes:  muestraPorConsolaEurosEnPesetas NO es una función');
+  console.log('suspendes:  muestraPorConsolaEurosEnPesetas NO es una función');
 }
 
 // TEST 2
-if ( typeof muestraPorConsolaEurosEnPesetas(2) === 'undefined' ) {
-    console.log('apruebas: muestraPorConsolaEurosEnPesetas devuelve undefined');
+if (typeof muestraPorConsolaEurosEnPesetas(2) === 'undefined') {
+  console.log('apruebas: muestraPorConsolaEurosEnPesetas devuelve undefined');
 } else {
-    console.log('suspendes: muestraPorConsolaEurosEnPesetas NO devuelve undefined');
+  console.log('suspendes: muestraPorConsolaEurosEnPesetas NO devuelve undefined');
 }
 
 
 // TEST 4
 try {
-    muestraPorConsolaEurosEnPesetas('1');
-    muestraPorConsolaEurosEnPesetas(true);
-    muestraPorConsolaEurosEnPesetas();
-    console.log('suspendes: muestraPorConsolaEurosEnPesetas debe lanzar un error si no recibe un número');
-    
+  muestraPorConsolaEurosEnPesetas('1');
+  muestraPorConsolaEurosEnPesetas(true);
+  muestraPorConsolaEurosEnPesetas();
+  console.log('suspendes: muestraPorConsolaEurosEnPesetas debe lanzar un error si no recibe un número');
+
 } catch (error) {
-    console.log('apruebas');
-        
+  console.log('apruebas');
+
 }
