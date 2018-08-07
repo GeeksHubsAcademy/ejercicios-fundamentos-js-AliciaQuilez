@@ -1,9 +1,7 @@
 
-var promise = new Promise (function(fulfill, reject){
-    fulfill('PROMISE VALUE');
+var promise = Promise.resolve('RESUELTO!');
+promise = Promise.reject(new Error('no resulto'))
+
+promise.catch(function (err){
+  console.error('mal!');
 })
-
-
-promise.then(console.log);
-
-console.log('MAIN PROGRAM');
