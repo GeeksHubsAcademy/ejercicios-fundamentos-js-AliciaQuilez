@@ -1,7 +1,5 @@
+var promise = first();
 
-var promise = Promise.resolve('RESUELTO!');
-promise = Promise.reject(new Error('no resulto'))
+var promise2 = promise.then(second);
 
-promise.catch(function (err){
-  console.error('mal!');
-})
+promise2.then(console.log);
