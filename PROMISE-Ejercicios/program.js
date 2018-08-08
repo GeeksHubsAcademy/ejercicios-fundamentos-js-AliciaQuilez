@@ -1,5 +1,7 @@
-var promise = first();
+let attachTitle = (name) => {
+    return 'DR. ' + name;
+}
 
-var promise2 = promise.then(second);
-
-promise2.then(console.log);
+var promise = Promise.resolve('MANHATTAN')
+.then(attachTitle)
+.then(console.log);
