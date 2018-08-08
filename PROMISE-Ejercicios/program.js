@@ -1,6 +1,6 @@
 
 function alwaysThrows(){
-    throw new Error('OH NOES!');
+    throw new Error('OH NOES');
 }
 
 function iterate(num){
@@ -13,6 +13,7 @@ var promise = Promise.resolve(iterate(1))
 .then(iterate)
 .then(iterate)
 .then(iterate)
+.then(alwaysThrows)
 .then(iterate)
 .then(iterate)
 .then(iterate)
