@@ -1,7 +1,16 @@
-let attachTitle = (name) => {
-    return 'DR. ' + name;
+let parsePromised = (json) => {
+   return new Promise(function(fulfill,reject){
+    try{  
+    fulfill(JSON.parse(json))
+    }catch(e){
+        reject(e);
+    }
+   })
 }
 
-var promise = Promise.resolve('MANHATTAN')
-.then(attachTitle)
-.then(console.log);
+function onReject(error){
+    console.log(error.message)
+}
+
+parsePromised(process.argv[2])
+.then(null,console.log)
